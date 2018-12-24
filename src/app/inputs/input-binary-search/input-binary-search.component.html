@@ -1,0 +1,14 @@
+<div class="default-container-margin d-flex">
+  What's your phone number?
+</div>
+
+<div class="default-container-margin d-flex">
+  <button mat-raised-button class="default-margins" color="primary" (click)="less()">Before</button>
+  <mat-card class="flex-grow-1 text-center default-margins">{{value | leading:'0':9}}</mat-card>
+  <button mat-raised-button class="default-margins" color="primary" (click)="more()">After</button>
+</div>
+
+<div class="default-container-margin d-flex">
+  <button mat-raised-button color="primary" class="flex-grow-1 default-margins" (click)="reset()">Reset</button>
+  <button mat-raised-button color="primary" class="flex-grow-1 default-margins" (click)="submit()">Submit</button>
+</div>
