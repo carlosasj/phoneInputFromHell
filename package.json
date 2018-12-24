@@ -7,6 +7,8 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "yarn ng run phoneInputFromHell:build -c production",
+    "docs": "yarn ng run phoneInputFromHell:build -c docs",
+    "postdocs": "cp docs/index.html docs/404.html",
     "lint": "ng lint"
   },
   "private": true,
