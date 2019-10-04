@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'wheel',
     loadChildren: './inputs/input-wheel/input-wheel.module#InputWheelModule'
   },
+  {
+    path: 'select-chunk',
+    loadChildren: './inputs/input-select-chunk/input-select-chunk.module#InputSelectChunkModule'
+  },
 ];
 
 @NgModule({
