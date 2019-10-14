@@ -1,0 +1,24 @@
+<div class="default-container-margin d-flex">
+  What's your phone number?
+</div>
+
+<div class="default-container-margin d-flex">
+  <button mat-raised-button class="default-margins" color="primary" (mousedown)="pressBeep()">
+    Beep
+  </button>
+  <mat-card class="flex-grow-1 text-center default-margins">{{ phoneNumber | leading:'0':9 }}</mat-card>
+  <button mat-raised-button class="default-margins" color="primary" (click)="clear()">
+    Clear
+  </button>
+</div>
+
+<div class="default-container-margin text-center">
+    {{ currentChar | morse }}
+    <span *ngIf="morseTable[currentChar] as result">({{ result }})</span>
+</div>
+
+<div class="cheat-sheet default-container-margin">
+  <p *ngFor="let row of cheatSheet">
+    {{ row[1] }} {{ row[0] | morse }}
+  </p>
+</div>
