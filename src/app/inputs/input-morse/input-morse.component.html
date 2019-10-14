@@ -18,6 +18,7 @@
 </div>
 
 <div class="cheat-sheet default-container-margin">
+  <!-- Shows the morse code for the numerals -->
   <p *ngFor="let row of cheatSheet">
     {{ row[1] }} {{ row[0] | morse }}
   </p>

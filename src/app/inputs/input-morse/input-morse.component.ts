@@ -1,11 +1,11 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-input-morse',
   templateUrl: './input-morse.component.html',
   styleUrls: ['./input-morse.component.scss']
 })
-export class InputMorseComponent implements OnInit {
+export class InputMorseComponent {
   longDuration = 300;
   timeBetweenChars = 2000;
   isPressed = false;
@@ -60,11 +60,6 @@ export class InputMorseComponent implements OnInit {
   constructor() {
     this.cheatSheet = Object.entries(this.morseTable)
       .filter(([morse, ch]) => '0' <= ch && ch <= '9');
-
-    console.log(this.cheatSheet);
-  }
-
-  ngOnInit() {
   }
 
   onNextChar() {
