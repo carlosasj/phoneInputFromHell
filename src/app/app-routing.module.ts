@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: './inputs/input-binary-search/input-binary-search.module#InputBinarySearchModule'
   },
   {
+    path: 'morse',
+    loadChildren: './inputs/input-morse/input-morse.module#InputMorseModule'
+  },
+  {
     path: 'plus',
     loadChildren: './inputs/input-plus/input-plus.module#InputPlusModule'
   },
