@@ -1,0 +1,35 @@
+<div class="default-container-margin d-flex">
+    What's your phone number?
+</div>
+
+<div class="default-container-margin d-flex">
+    <mat-form-field>
+        <mat-label>First 3 digits</mat-label>
+        <mat-select [(value)] = "firstChunkValue">
+            <mat-option *ngFor="let chunk of chunks" [value]="chunk.phoneDigits">
+                {{chunk.phoneDigits}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Second 3 digits</mat-label>
+        <mat-select [(value)] = "secondChunkValue">
+            <mat-option *ngFor="let chunk of chunks" [value]="chunk.phoneDigits">
+                {{chunk.phoneDigits}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Third 3 digits</mat-label>
+        <mat-select [(value)] = "thirdChunkValue">
+            <mat-option *ngFor="let chunk of chunks" [value]="chunk.phoneDigits">
+                {{chunk.phoneDigits}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+<div class="default-container-margin d-flex">
+    <button mat-raised-button color="primary" class="flex-grow-1 default-margins" (click)="resetForm()">Reset</button>
+    <button mat-raised-button color="primary" class="flex-grow-1 default-margins" (click)="concatenateDigits()">Submit</button>
+</div>
